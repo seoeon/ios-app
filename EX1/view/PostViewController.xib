@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostViewController">
+            <connections>
+                <outlet property="mainContents" destination="H3a-aX-hF8" id="Gjp-sG-qnj"/>
+                <outlet property="mainImage" destination="DXu-3d-sZb" id="FZE-pe-j1t"/>
+                <outlet property="mainTitle" destination="Go0-a3-cO0" id="12p-Ew-FdF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQU-U8-Uu2">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="Waz-Jv-SqW">
+                            <barButtonItem key="leftBarButtonItem" title="Back" id="eBB-d6-qRv">
+                                <connections>
+                                    <action selector="backOnClick:" destination="-1" id="Gab-iT-ylL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" systemItem="save" id="hAO-XK-9aA">
+                                <connections>
+                                    <action selector="saveOnClick:" destination="-1" id="5ib-bp-0p8"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DXu-3d-sZb">
+                    <rect key="frame" x="0.0" y="88" width="414" height="240"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="5Oi-M7-b3A" appends="YES" id="lvl-U4-d8Z"/>
+                    </connections>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="TITLE" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Go0-a3-cO0">
+                    <rect key="frame" x="0.0" y="328" width="414" height="30"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="contents" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="H3a-aX-hF8">
+                    <rect key="frame" x="0.0" y="366" width="414" height="496"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="RQU-U8-Uu2" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="0GL-dY-OgV"/>
+                <constraint firstItem="RQU-U8-Uu2" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="0vD-o9-KA6"/>
+                <constraint firstItem="DXu-3d-sZb" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="CVq-aA-r0A"/>
+                <constraint firstItem="Go0-a3-cO0" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="KEn-i3-QIi"/>
+                <constraint firstItem="RQU-U8-Uu2" firstAttribute="width" secondItem="Q5M-cg-NOt" secondAttribute="width" id="KOq-2R-i5h"/>
+                <constraint firstItem="DXu-3d-sZb" firstAttribute="bottom" secondItem="RQU-U8-Uu2" secondAttribute="bottom" constant="240" id="LPP-aY-v7r"/>
+                <constraint firstItem="H3a-aX-hF8" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="Lzu-ea-Gf9"/>
+                <constraint firstItem="Go0-a3-cO0" firstAttribute="top" secondItem="DXu-3d-sZb" secondAttribute="bottom" id="NFB-pW-WMo"/>
+                <constraint firstItem="DXu-3d-sZb" firstAttribute="top" secondItem="RQU-U8-Uu2" secondAttribute="bottom" id="Ujg-b8-wFR"/>
+                <constraint firstItem="H3a-aX-hF8" firstAttribute="top" secondItem="Go0-a3-cO0" secondAttribute="bottom" constant="8" symbolic="YES" id="c0C-VI-G00"/>
+                <constraint firstItem="Go0-a3-cO0" firstAttribute="width" secondItem="Q5M-cg-NOt" secondAttribute="width" id="cgZ-7N-uFm"/>
+                <constraint firstItem="H3a-aX-hF8" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="heo-T6-e2i"/>
+                <constraint firstItem="Go0-a3-cO0" firstAttribute="bottom" secondItem="DXu-3d-sZb" secondAttribute="bottom" constant="30" id="uFI-3b-PgI"/>
+                <constraint firstItem="H3a-aX-hF8" firstAttribute="width" secondItem="Q5M-cg-NOt" secondAttribute="width" id="wHM-TH-Zlb"/>
+                <constraint firstItem="DXu-3d-sZb" firstAttribute="width" secondItem="Q5M-cg-NOt" secondAttribute="width" id="yhY-7A-WUQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="-490" y="21"/>
+        </view>
+        <tapGestureRecognizer id="5Oi-M7-b3A">
+            <connections>
+                <action selector="selectImgs:" destination="-1" id="GZH-1C-RKy"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

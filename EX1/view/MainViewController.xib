@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
+            <connections>
+                <outlet property="tableView" destination="Qhk-xi-6oe" id="xq2-Ld-dvt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ic-37-rjT">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="Q5W-Ie-quS">
+                            <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Le3-HC-YHZ">
+                                <connections>
+                                    <action selector="compose:" destination="-1" id="ejH-Ju-rpB"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qhk-xi-6oe">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Qhk-xi-6oe" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="9Xn-eq-B8h"/>
+                <constraint firstItem="5Ic-37-rjT" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="GUO-7w-HLf"/>
+                <constraint firstItem="Qhk-xi-6oe" firstAttribute="top" secondItem="5Ic-37-rjT" secondAttribute="bottom" id="GmY-ZA-KiW"/>
+                <constraint firstItem="5Ic-37-rjT" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="KDa-HP-NfO"/>
+                <constraint firstItem="Qhk-xi-6oe" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="sy6-Ea-h4l"/>
+                <constraint firstItem="5Ic-37-rjT" firstAttribute="width" secondItem="Q5M-cg-NOt" secondAttribute="width" id="uQK-6k-mSL"/>
+                <constraint firstItem="Qhk-xi-6oe" firstAttribute="width" secondItem="Q5M-cg-NOt" secondAttribute="width" id="wJw-JH-4EC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="259" y="86"/>
+        </view>
+        <navigationItem title="Title" id="0vC-gL-dkS"/>
+    </objects>
+</document>
